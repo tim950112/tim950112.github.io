@@ -1,0 +1,33 @@
+.content1 {
+    background-color: rgb(255, 228, 228);
+}
+
+.content2 {
+    background-color: rgb(234, 241, 255);
+}
+
+.content3 {
+    height: 750px;
+    background-color: rgb(230, 255, 237);
+}
+
+.pic {
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.bg_pur {
+    background-color: rgb(143, 70, 211);
+}
+
+.bg_bro {
+    background-color: rgb(90, 45, 45);
+}
+
+.bg_ora {
+    background-color: rgb(253, 105, 47);
+}
+
+.bg_pin {
+    background-color: rgba(253, 59, 91, 0.815);
+}

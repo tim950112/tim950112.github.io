@@ -1,0 +1,85 @@
+body {
+    background: radial-gradient(circle farthest-corner at left, #dde5b6, #edc4b3);
+}
+
+.wrap {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 100px 0px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ddb6a6;
+}
+
+.top {
+    position: relative;
+}
+
+.top h1 {
+    text-align: center;
+    color: #8d5c2a;
+    font-weight: bolder;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    position: relative;
+    width: 25%;
+    margin-left: 6%;
+    padding: 50px 0px;
+    border-radius: 10px;
+    background-color: #dde5b6;
+    box-shadow: 2px 2px 5px #c8ceb8;
+}
+
+.btn span {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    border: 5px solid #e7c6a5;
+    background-color: #fff;
+    color: #8d5c2a;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.btn a {
+    display: block;
+    padding: 25px;
+    color: #6c584c;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #9c9a5b;
+}
+
+.btn:hover a {
+    color: #fff;
+}
+
+.btn:hover span {
+    border-color: #bb854e;
+}
