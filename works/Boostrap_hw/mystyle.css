@@ -1,0 +1,89 @@
+.btn-purple {
+    color: #fff;
+    background-color: purple;
+    border-color: purple;
+  }
+  
+  .btn-purple:hover {
+    color: #fff;
+    background-color: #da51f8;
+    border-color: #b43ec1;
+  }
+  
+  .btn-purple:focus, .btn-purple.focus {
+    /* color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc; */
+    box-shadow: 0 0 0 0.2rem rgba(208, 88, 242, 0.5);
+  }
+  
+  .btn-purple.disabled, .btn-purple:disabled {
+    color: #fff;
+    background-color: purple;
+    border-color: purple;
+  }
+  
+  .btn-purple:not(:disabled):not(.disabled):active, .btn-purple:not(:disabled):not(.disabled).active,
+  .show > .btn-purple.dropdown-toggle {
+    color: #fff;
+    background-color: #b42ec1;
+    border-color: #6c088c;
+  }
+  
+  .btn-purple:not(:disabled):not(.disabled):active:focus, .btn-purple:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-purple.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(208, 88, 242, 0.5);
+  }
+
+  .btn-orange {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+  }
+  
+  .btn-orange:hover {
+    color: #fff;
+    background-color: rgb(255, 115, 0);
+    border-color: rgb(255, 136, 0);
+  }
+  
+  .btn-orange:focus, .btn-orange.focus {
+    /* color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc; */
+    box-shadow: 0 0 0 0.2rem rgba(236, 109, 35, 0.726);
+  }
+  
+  .btn-orange.disabled, .btn-orange:disabled {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+  }
+  
+  .btn-orange:not(:disabled):not(.disabled):active, .btn-orange:not(:disabled):not(.disabled).active,
+  .show > .btn-orange.dropdown-toggle {
+    color: #fff;
+    background-color: #e08234;
+    border-color: #ca690f;
+  }
+  
+  .btn-orange:not(:disabled):not(.disabled):active:focus, .btn-orange:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-orange.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(236, 109, 35, 0.726);
+  }
+
+  body{
+    padding-top: 75px;
+  }
+  .dropdown-submenu{
+    position: relative;
+ }
+.dropdown-submenu .dropdown-menu{
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.collapse.navbar-collapse img{
+   height: 50px;
+  width: 140px; 
+}
