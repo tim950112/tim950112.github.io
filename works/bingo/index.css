@@ -1,0 +1,33 @@
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+video {
+    border: 3px solid gray;
+    background-color: #000;
+}
+
+.button {
+    margin: 40px auto;
+    width: 94px;
+}
+
+button {
+    font-size: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    font-size: 26px;
+    background-color: gray;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(255, 252, 210);
+}
