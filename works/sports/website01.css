@@ -1,0 +1,70 @@
+#video-background,
+.video-background iframe {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -100;
+}
+
+.video-caption {
+    margin-top: 20%;
+}
+
+.video-caption.text-center h1 {
+    color: #FFF;
+    font-family: "微軟正黑體", Arial, Helvetica;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.margintop-30 {
+    margin-top: 30px;
+}
+
+.margintop-30 .btn.btn-warning {
+    color: #FFF;
+}
+
+.jumbotron {
+    color: #FFF;
+    background-image: url(images/pic51.jpg);
+    background-attachment: fixed;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    min-height: 865px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-width: 100%;
+}
+
+body {
+    font-family: "微軟正黑體", Arial, Helvetica;
+    font-weight: bold;
+    /* padding: 0px;
+    margin: 0px;
+    height: 3000px; */
+}
+
+#production {
+    padding-top: 40px;
+}
+
+#sportlogo {
+    padding-top: 40px;
+}
+
+.bgcolor {
+    color: #FFF;
+    background-color: #E47303;
+}
+
+#buyrules {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
