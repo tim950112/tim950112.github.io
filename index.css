@@ -1,14 +1,30 @@
 .content1 {
-    background-color: rgb(255, 228, 228);
+    height: 80vh;
+    max-width: 100%;
+    background-image: url("images/bgp.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right top 50px;
+    position: relative;
+    /* border: 1px solid lightgray; */
 }
 
-.content2 {
-    background-color: rgb(234, 241, 255);
-}
+
+/* .content2 {
+    border: 1px solid lightgray;
+} */
 
 .content3 {
-    height: 750px;
-    background-color: rgb(230, 255, 237);
+    height: 110vh;
+    max-width: 100%;
+    background-image: url("images/bgp.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right top 50px;
+    position: relative;
+    /* border: 1px solid lightgray; */
 }
 
 .pic {
@@ -37,11 +53,119 @@
     background-color: #212529;
 }
 
+.navbar {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 #header .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.75);
+    color: #f8f9fa;
+    border-bottom: 2px solid #212529;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    transition: border-bottom 0.5s ease 0s;
 }
 
 #header .navbar-nav .nav-link:hover {
-    color: #f8f9fa;
+    /* font-weight: bold; */
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.navbar-brand {
+    border-bottom: 2px solid #f8f9fa;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.hello {
+    border: 4px solid #f8f9fa;
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    top: 35%;
+    left: 25%;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+#content2:target:before {
+    content: "";
+    display: block;
+    height: 62px;
+}
+
+#content3:target:before {
+    content: "";
+    display: block;
+    height: 62px;
+}
+
+.hello h2 {
+    margin-top: 3rem;
+}
+
+.content3 .card {
+    /* border: 4px solid #212529; */
+    border: none;
+}
+
+h2 {
     font-weight: bold;
+}
+
+.content3 .card {
+    transition: all 0.5s ease 0s;
+}
+
+.content3 .card:hover {
+    transform: scale(1.1, 1.1);
+    z-index: 10;
+    /* opacity: 0.6; */
+}
+
+.badge {
+    transition: all 0.5s ease 0s;
+}
+
+.badge:hover {
+    box-shadow: 0.3rem 0.3rem 10px grey;
+    transform: translate( -0.1rem, -0.1rem);
+}
+
+
+/* 做到一半的動畫 */
+
+.fade_in {
+    border-color: #212529;
+    transition: all 1s ease 0s;
+}
+
+@media screen and (max-width: 992px) {
+    .hello {
+        width: 70%;
+        height: 30%;
+        top: 35%;
+        left: 15%;
+    }
+    .content3 {
+        height: auto;
+    }
+    .navbar-brand {
+        border-bottom: 2px solid #f8f9fa;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .footer .navbar-brand {
+        margin-bottom: 5%;
+    }
+    .navbar {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    .navbar-nav {
+        padding-top: 0.5em;
+    }
+    .nav-link {
+        margin-top: 0.25em;
+    }
 }
