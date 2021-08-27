@@ -231,6 +231,6 @@ h2 {
         margin-top: 0.25em;
     }
     .day {
-        background-size: auto 100%;
+        background-size: 100% 100%;
     }
 }
