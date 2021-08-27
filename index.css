@@ -8,6 +8,10 @@
     max-width: 100%;
 }
 
+.card-title {
+    font-weight: bold;
+}
+
 .day {
     background-image: url("images/bgp.jpg");
     background-attachment: fixed;
@@ -19,8 +23,8 @@
 }
 
 .night {
-    background-image: url("images/bgp3.jpg");
-    /* background-image: url("images/bgp4.jpg"); */
+    /* background-image: url("images/bgp3.jpg"); */
+    background-image: url("images/bgp2-2.jpg");
     color: #f8f9fa;
     transition: all 0.5s ease 0s;
 }
