@@ -207,8 +207,8 @@
 
     <script>
         if (window.screen.width < 992) {
-            var nav = document.getElementsByClassName("nav-link");
-            for (var a = 0; a < nav.length; a++) {
+            let nav = document.getElementsByClassName("nav-link");
+            for (let a = 0; a < nav.length; a++) {
                 nav[a].addEventListener("click", toggle);
             }
 
@@ -219,14 +219,12 @@
         };
     </script>
 
-
-
     <script>
-        var swit = document.querySelector(".form-check-input");
+        let swit = document.querySelector(".form-check-input");
         swit.addEventListener("click", change);
-        var cont1 = document.querySelector("#content1");
-        var cont3 = document.querySelector("#content3");
-        var hello = document.querySelector(".hello");
+        let cont1 = document.querySelector("#content1");
+        let cont3 = document.querySelector("#content3");
+        let hello = document.querySelector(".hello");
 
         function change() {
             cont1.classList.toggle("night");
