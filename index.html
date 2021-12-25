@@ -69,6 +69,7 @@
                                 <span class="badge bg-primary mx-1 mb-1 fs-6">CSS</span>
                                 <span class="badge bg_pur mx-1 mb-1 fs-6">Bootstrap</span>
                                 <span class="badge bg-success mx-1 mb-1 fs-6">JavaScript</span>
+                                <span class="badge bg-gre mx-1 mb-1 fs-6">jQuery</span>
                                 <span class="badge bg-danger mx-1 mb-1 fs-6">GitHub</span>
                                 <span class="badge bg-warning mx-1 mb-1 fs-6">PHP</span>
                                 <span class="badge bg_ora mx-1 mb-1 fs-6">C++</span>
@@ -81,7 +82,7 @@
                                 <p class="card-text fw-bold">國立暨南國際大學 資訊工程學系</p>
                                 <p class="card-text ">- 畢業於國立暨南國際大學資訊工程學系，在校內期間主要學習 C++語言。</p>
                                 <p class="card-text ">- 加入了社會服務團，進行過地區的志願服務工作與國小營隊活動。</p>
-                                <p class="card-text ">- 參與了職訓局的電子商務網站建置班，學習 HTML、CSS、Bootstrap、JavaScript、PHP、GitHub、Photoshop、Illustrator、Adobe XD 等課程。</p>
+                                <p class="card-text ">- 參與了職訓局的電子商務網站建置班，學習 HTML、CSS、Bootstrap、JavaScript、jQuery、PHP、GitHub、Photoshop、Illustrator、Adobe XD 等技能。</p>
                                 <p class="card-text ">- 我是一個願意學習的人，希望未來能在相關產業發揮所長。</p>
                             </div>
                         </div>
@@ -177,7 +178,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col" data-aos="zoom-in-up" data-aos-delay="800">
+                        <div class="col" data-aos="zoom-in-up" data-aos-delay="900">
                             <div class="card h-100 text-white bg-dark">
                                 <a href="works/api/" target="_blank"><img src="images/api.jpg" class="card-img-top" alt="..."></a>
                                 <div class="card-body">
@@ -235,6 +236,9 @@
 
     <!-- javascript檔 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="gotop.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         //手機模式點擊導覽列收回
@@ -250,7 +254,7 @@
         };
     </script>
 
-    <script src="jquery-3.6.0.min.js"></script>
+
     <script>
         $(document).ready(function() {
             //Loading畫面淡出
@@ -302,11 +306,25 @@
                 $('#content1,#content3').toggleClass("night");
                 $('.hello').toggleClass("night_text");
                 $('#content2,#content,#content2 .card').toggleClass("nightbg");
+                $('.contact').toggleClass("nightbg");
+                $('.tex').toggleClass("night_tex");
+                $('#phone img').attr("src", function(i, oldattr) {
+                    return (oldattr == "/images/phone-call.png") ? "/images/phone-call-w.png" : "/images/phone-call.png"
+                });
+                $('#email img').attr("src", function(i, oldattr) {
+                    return (oldattr == "/images/email2.png") ? "/images/email2-w.png" : "/images/email2.png"
+                });
+                $('#github img').attr("src", function(i, oldattr) {
+                    return (oldattr == "/images/github-logo.png") ? "/images/github-logo-w.png" : "/images/github-logo.png"
+                });
+                $('#goTopButton').attr("src", function(i, oldattr) {
+                    return (oldattr == "/images/upload.png") ? "/images/upload-w.png" : "/images/upload.png"
+                });
             });
 
         });
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         AOS.init({
             duration: 1000
