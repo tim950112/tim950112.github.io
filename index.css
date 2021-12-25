@@ -1,12 +1,40 @@
-.content1 {
-    height: 100vh;
-    max-width: 100%;
+#content {
+    background-color: #f8f9fa;
+    /* background-color: #5984b6; */
+    color: #212529;
+    transition: all 0.5s ease 0s;
 }
 
-.content3 {
+#content2 {
+    background-color: #f8f9fa;
+    /* background-color: #5984b6; */
+    color: #212529;
+    transition: all 0.5s ease 0s;
+}
+
+#content2 .card {
+    background-color: #f8f9fa;
+    /* background-color: #5984b6;
+    border: #5984b6; */
+    color: #212529;
+    transition: all 0.5s ease 0s;
+}
+
+#content1 {
+    background-color: #f8f9fa;
+    color: #212529;
+    height: 100vh;
+    max-width: 100%;
+    transition: all 0.5s ease 0s;
+}
+
+#content3 {
     /* height: 110vh; */
+    background-color: #f8f9fa;
+    color: #212529;
     max-width: 100%;
     overflow: hidden;
+    transition: all 0.5s ease 0s;
 }
 
 .card-title {
@@ -26,15 +54,16 @@
 .night {
     /* background-image: url("images/bgp3.jpg"); */
     background-image: url("images/bgp2-2.jpg");
-    color: #f8f9fa;
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
     transition: all 0.5s ease 0s;
 }
 
 .nightbg {
-    background-color: #212529;
-    color: #f8f9fa;
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
     border-color: #212529 !important;
-    /* transition: all 0.5s ease 0s; */
+    transition: all 0.5s ease 0s;
 }
 
 .hello {
@@ -47,13 +76,14 @@
     left: 25%;
     right: 25%;
     background-color: #f8f9fa;
+    /* color: #212529; */
     border-radius: 0.25rem;
     transition: all 0.5s ease 0s;
 }
 
 .night_text {
     background-color: #212529;
-    color: #f8f9fa;
+    /* color: #f8f9fa; */
     transition: all 0.5s ease 0s;
 }
 
@@ -65,8 +95,8 @@
 }
 
 .pic:hover {
-    box-shadow: 0.5rem 0.5rem 10px grey;
-    transform: translate( -0.1rem, -0.1rem);
+    box-shadow: 0.5rem 0.5rem 20px #212529;
+    /* transform: translate( -0.1rem, -0.1rem); */
 }
 
 .bg_pur {
@@ -89,6 +119,36 @@
     background-color: #212529;
 }
 
+.contact {
+    background-color: #f8f9fa;
+    /* background-color: #5984b6; */
+    /* background: transparent; */
+    text-align: center;
+    text-decoration: none;
+}
+
+#github a {
+    text-decoration: none;
+}
+
+.tex {
+    color: #212529;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.contact img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.contact img:hover {
+    width: 85px;
+    height: 85px;
+}
+
 .navbar {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -105,7 +165,9 @@
 
 #header .navbar-nav .nav-link:hover {
     /* font-weight: bold; */
-    border-bottom: 2px solid #f8f9fa;
+    border-bottom: 2px solid;
+    /* border-bottom: 2px solid #5984b6; */
+    /* color: #5984b6; */
 }
 
 .navbar-brand {
@@ -116,8 +178,7 @@
 }
 
 
-/* 
-.test {
+/* .test {
     position: absolute;
     left: 60%;
     top: 71%;
@@ -133,10 +194,9 @@
     animation-delay: 0.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-} */
+}
 
-
-/* @keyframes test {
+@keyframes test {
     0% {
         background: #212529;
         border: 2px solid #f8f9fa;
@@ -187,12 +247,13 @@ h2 {
 }
 
 .badge:hover {
-    box-shadow: 0.3rem 0.3rem 5px grey;
-    transform: translate( -0.1rem, -0.1rem);
+    box-shadow: 0.3rem 0.3rem 10px #212529;
+    /* transform: translate( -0.1rem, -0.1rem); */
 }
 
 .form-switch .form-check-input {
-    background-color: #ec8938;
+    /* background-color: #ec8938; */
+    background-color: #ecc43d;
     border: none;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
     box-shadow: none;
@@ -207,6 +268,27 @@ h2 {
 
 .form-switch .form-check-input:focus {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+
+.load {
+    top: 37%;
+    position: relative;
+}
+
+#loading {
+    width: 200px;
+    height: 200px;
+    border-width: 15px;
+}
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background-color: #f8f9fa;
+    z-index: 9999;
 }
 
 @media screen and (max-width: 992px) {
@@ -239,5 +321,10 @@ h2 {
     }
     .day {
         background-size: 100% 100%;
+    }
+    #loading {
+        width: 100px;
+        height: 100px;
+        border-width: 10px;
     }
 }

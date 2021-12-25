@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api串接練習2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>新竹市合法旅宿資料名冊<br><a href=https://data.gov.tw/dataset/67759>(資料來源:政府資料開放平台)</a></h1>
+    </div>
+    <div id="contain">
+        <button @click="low">5000以下</button>
+        <button @click="medium">5000至10000</button>
+        <button @click="high">10000以上</button> {{pmax}}
+    </div>
+
+    <script>
+        var cros = 'https://cors-anywhere.herokuapp.com/';
+        var originUrl = "https://odws.hccg.gov.tw/001/Upload/25/opendata/9059/85/bdb55836-7978-4f9c-bd88-325568fb3f56.json";
+        var dataUrl = cros + originUrl;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', dataUrl, true);
+        xhr.send();
+        xhr.onload = function() {
+            var dataset = JSON.parse(this.responseText);
+
+            if (this.readyState === 4 && this.status === 200) {
+                // dataset.forEach((data) => {
+                //     let newCard = document.createElement("div");
+                //     newCard.className = "infoCard";
+                //     document.querySelector("#contain").appendChild(newCard);
+                //     let newCardInfo = `
+                //     	<div class="order">${data.序號}</div>
+                //     	<h3 class="name">${data.旅館名稱}</h3>
+                //     	<p class="address">營業地址 : ${data.營業地址}</p>
+                //     	<p class="tel">電話 : ${data.電話}</p>
+                //     	<p class="low">最低價格 : ${data.最低價格} 元</p>
+                //     	<p class="high">最高價格 : ${data.最高價格} 元</p>
+                //     	<p class="num">房間總數 : ${data.房間總數} 間</p>
+                // 	`;
+                //     newCard.innerHTML = newCardInfo;
+                // })
+                dataset.forEach((data) => {
+                    let newCard = document.createElement("div");
+                    newCard.className = "infoCard";
+                    document.querySelector("#contain").appendChild(newCard);
+                    let newCardInfo = `
+		            	<div class="order">${data.序號}</div>
+		            	<h3 class="name">${data.旅館名稱}</h3>
+		            	<p class="address">營業地址 : ${data.營業地址}</p>
+		            	<p class="tel">電話 : ${data.電話}</p>
+		            	<p class="low">最低價格 : ${data.最低價格} 元</p>
+		            	<p class="high">最高價格 : ${data.最高價格} 元</p>
+		            	<p class="num">房間總數 : ${data.房間總數} 間</p>
+	            	`;
+                    newCard.innerHTML = newCardInfo;
+                })
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const hotel = Vue.createApp({
+            data() {
+                return {
+                    pmin: 0,
+                    pmax: 1000000,
+                }
+            },
+            methods: {
+                low() {
+                    this.pmax = 5000;
+                },
+                medium() {
+
+                },
+                high() {
+
+                },
+            }
+        }).mount("#contain");
+    </script>
+
+</body>
+
+</html>
