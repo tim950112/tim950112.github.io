@@ -4,8 +4,8 @@
 (function() {
     $("body").append("<img id='goTopButton' style='display: none; z-index: 5; cursor: pointer;' title='回到頂端'/>");
     var img = "images/top.png",
-        locatioin = 2 / 3, // 按鈕出現在螢幕的高度
-        right = 20, // 距離右邊 px 值
+        locatioin = 3 / 4, // 按鈕出現在螢幕的高度
+        right = 30, // 距離右邊 px 值
         opacity = 0.6, // 透明度
         speed = 500, // 捲動速度
         $button = $("#goTopButton"),
