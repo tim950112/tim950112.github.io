@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+}
+
+.logo img {
+    width: 120px;
+    margin-top: 8px;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    background-color: #fafafa;
+    border: 1px #dbdbdb solid;
+    border-radius: 3px;
+    text-align: center;
+}
+
+::placeholder {
+    color: rgb(145, 144, 144);
+}
+
+header {
+    border-bottom: 1px #dbdbdb solid;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.search::before,
+.icon::before {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+
+svg {
+    margin: 18px 8px 18px 8px;
+    margin: 18px 8px;
+}
+
+.content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 1px #dbdbdb solid;
+}
+
+.about_me {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.name span {
+    font-size: 25px;
+}
+
+.name a {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px #dbdbdb solid;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin: 5px 12px;
+    margin-bottom: 10px;
+}
+
+.follow {
+    display: flex;
+}
+
+.follow p {
+    padding-right: 30px;
+}
+
+.name {
+    position: relative;
+}
+
+.name svg {
+    margin: 0;
+    position: absolute;
+    top: 18%
+}
+
+.me {
+    margin-left: 87px;
+}
+
+.me p {
+    line-height: 24px;
+}
+
+.story {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.story img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #dbdbdb;
+    display: block;
+    margin: auto 0;
+}
+
+.story p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.story div {
+    margin: 0 20px;
+}
+
+.category {
+    border-top: 1px solid #dbdbdb;
+    cursor: pointer;
+}
+
+.category svg {
+    margin: 0px;
+    margin-right: 5px;
+}
+
+.cat {
+    width: 500px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.category p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.post>div {
+    background-color: black;
+    width: 281px;
+    height: 281px;
+}
+
+.post .pic {
+    width: 281px;
+    height: 281px;
+    position: absolute;
+}
+
+.mr25 {
+    margin-right: 28px;
+}
+
+.mb25 {
+    margin-bottom: 28px;
+}
+
+.post a:hover .pic {
+    opacity: 0.6;
+}
+
+.post a:hover .popular {
+    opacity: 1;
+}
+
+.heart,
+.speech {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin-right: 5px;
+}
+
+.num {
+    color: white;
+    font-weight: bold;
+    display: inline;
+    margin-right: 25px;
+}
+
+.popular {
+    position: relative;
+    top: 45%;
+    left: 28%;
+    opacity: 0;
+}
+
+.post a {
+    /* display: flex; */
+    text-decoration: none;
+}
+
+.category1 {
+    color: black;
+}
+
+.category2 {
+    color: gray;
+}
+
+.category3 {
+    color: gray;
+}
