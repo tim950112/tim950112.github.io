@@ -10,14 +10,27 @@
 </head>
 
 <body>
-    <div class="title">
-        <h1>新竹市合法旅宿資料名冊<br><a href=https://data.gov.tw/dataset/67759>(資料來源:政府資料開放平台)</a></h1>
+    <div id="main">
+        <div id="mytag">
+            <div class="title">
+                <h1>我的最愛</h1>
+            </div>
+            <div id="tag">
+                <p class="card" v-for="(item,index) in checked">{{ item }}
+                    <button v-on:click="goto(index)">詳細</button>
+                    <button id="warning" v-on:click="remove(index)">刪除</button>
+                </p>
+
+            </div>
+        </div>
+        <div id="hotel">
+            <div class="title">
+                <h1>新竹市合法旅宿資料名冊<br><a href=https://data.gov.tw/dataset/67759>(資料來源:政府資料開放平台)</a></h1>
+            </div>
+            <div id="contain"></div>
+        </div>
     </div>
-    <div id="contain">
-        <button @click="low">5000以下</button>
-        <button @click="medium">5000至10000</button>
-        <button @click="high">10000以上</button> {{pmax}}
-    </div>
+
 
     <script>
         var cros = 'https://cors-anywhere.herokuapp.com/';
@@ -31,26 +44,11 @@
             var dataset = JSON.parse(this.responseText);
 
             if (this.readyState === 4 && this.status === 200) {
-                // dataset.forEach((data) => {
-                //     let newCard = document.createElement("div");
-                //     newCard.className = "infoCard";
-                //     document.querySelector("#contain").appendChild(newCard);
-                //     let newCardInfo = `
-                //     	<div class="order">${data.序號}</div>
-                //     	<h3 class="name">${data.旅館名稱}</h3>
-                //     	<p class="address">營業地址 : ${data.營業地址}</p>
-                //     	<p class="tel">電話 : ${data.電話}</p>
-                //     	<p class="low">最低價格 : ${data.最低價格} 元</p>
-                //     	<p class="high">最高價格 : ${data.最高價格} 元</p>
-                //     	<p class="num">房間總數 : ${data.房間總數} 間</p>
-                // 	`;
-                //     newCard.innerHTML = newCardInfo;
-                // })
                 dataset.forEach((data) => {
                     let newCard = document.createElement("div");
                     newCard.className = "infoCard";
                     document.querySelector("#contain").appendChild(newCard);
-                    let newCardInfo = `
+                    let newCardInfo = `                        
 		            	<div class="order">${data.序號}</div>
 		            	<h3 class="name">${data.旅館名稱}</h3>
 		            	<p class="address">營業地址 : ${data.營業地址}</p>
@@ -58,33 +56,40 @@
 		            	<p class="low">最低價格 : ${data.最低價格} 元</p>
 		            	<p class="high">最高價格 : ${data.最高價格} 元</p>
 		            	<p class="num">房間總數 : ${data.房間總數} 間</p>
+                        <input type="checkbox" id="checkbox${data.序號}" value="${data.序號}.${data.旅館名稱}" v-model="checked">
+                        <label for="checkbox${data.序號}">加入最愛</label>
 	            	`;
                     newCard.innerHTML = newCardInfo;
                 })
             }
         };
     </script>
+
     <script src="https://unpkg.com/vue@next"></script>
     <script>
-        const hotel = Vue.createApp({
+        let myvue = Vue.createApp({
             data() {
                 return {
-                    pmin: 0,
-                    pmax: 1000000,
+                    note: "#",
+                    checked: ['範例:歡迎使用']
                 }
             },
             methods: {
-                low() {
-                    this.pmax = 5000;
+                remove: function(index) {
+                    this.checked.splice(index, 1);
                 },
-                medium() {
-
-                },
-                high() {
-
-                },
+                goto: function(index) {
+                    //取出旅館序號
+                    this.note = this.checked[index].split(".").splice(0, 1);
+                    //mytag區塊高度
+                    let tagh = document.getElementById("mytag").offsetHeight;
+                    //旅館input與頂端距離
+                    let checkt = document.getElementById("checkbox" + this.note).offsetTop;
+                    document.documentElement.scrollTop = checkt - tagh - 300;
+                }
             }
-        }).mount("#contain");
+
+        }).mount("#main");
     </script>
 
 </body>
