@@ -40,7 +40,8 @@ a {
     height: 32%;
     padding-left: 15%;
     padding-right: 15%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    overflow-y: auto;
 }
 
 #tag {
@@ -72,7 +73,7 @@ a {
     font-size: 14px;
 }
 
-#warning {
+.warning {
     color: crimson;
 }
 
@@ -80,7 +81,17 @@ a {
     #hotel {
         padding-top: 15rem;
     }
-    #mytag {
+    /* #mytag {
+        width: 70%;
+    } */
+    .card button {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .card {
         width: 100%;
+        text-align: center;
     }
 }
