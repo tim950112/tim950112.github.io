@@ -95,7 +95,7 @@
 }
 
 .pic:hover {
-    box-shadow: 0.5rem 0.5rem 20px #212529;
+    box-shadow: 0.5rem 0.5rem 20px #3f474e;
     /* transform: scale(1.1, 1.1); */
 }
 
@@ -117,6 +117,10 @@
 
 .bg_gre {
     background-color: rgb(132, 168, 0);
+}
+
+.bg_mid {
+    background-color: rgb(153, 59, 130);
 }
 
 .footer {
@@ -226,7 +230,7 @@ h2 {
 }
 
 .badge:hover {
-    box-shadow: 0.3rem 0.3rem 10px #212529;
+    box-shadow: 0.3rem 0.3rem 10px #3f474e;
     /* transform: translate( -0.1rem, -0.1rem); */
 }
 

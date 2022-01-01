@@ -142,7 +142,6 @@ svg {
 
 .category {
     border-top: 1px solid #dbdbdb;
-    cursor: pointer;
 }
 
 .category svg {
@@ -160,6 +159,7 @@ svg {
 .category p {
     font-size: 13px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .post {
@@ -283,6 +283,13 @@ svg {
     .follow p {
         padding-right: 15px;
     }
+    .popular {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80px;
+        top: 40%;
+        left: 30%;
+    }
 }
 
 @media screen and (max-width:370px) {
@@ -300,7 +307,6 @@ svg {
     .content>div {
         margin-left: 5px;
         margin-right: 5px;
-        width: 100%;
     }
     .post .pic {
         width: 90px;
@@ -309,7 +315,5 @@ svg {
     .post>div {
         width: 90px;
         height: 90px;
-        margin-right: 5px;
-        margin-bottom: 5px;
     }
 }
