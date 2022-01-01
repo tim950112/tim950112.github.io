@@ -85,15 +85,9 @@
                     	<p class="num">房間總數 : ${data.房間總數} 間</p>
                         <input type="checkbox" id="checkbox${data.序號}" value="${data.序號}.${data.旅館名稱}" v-model="checked">
                         <label for="checkbox${data.序號}">加入最愛</label>
-                	`;
+                	    `;
                     newCard.innerHTML = newCardInfo;
                 })
-
-                // function refresh() {
-                //     window.location.reload();
-                //     setTimeout(refresh(), 1000);
-                // };
-
 
                 //控制讀取畫面消失
                 myvue.mount("#main");
