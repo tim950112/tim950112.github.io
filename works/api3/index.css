@@ -77,6 +77,40 @@ a {
     color: crimson;
 }
 
+#load {
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#load p {
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width:768px) {
     #hotel {
         padding-top: 15rem;
