@@ -1,85 +1,24 @@
 body {
-    /* background-color: rgb(172, 172, 172); */
-    background: linear-gradient( rgb(158, 221, 151), rgb(148, 187, 218), rgba(221, 170, 170), rgb(158, 221, 151), rgb(148, 187, 218), rgba(221, 170, 170));
-}
-
-.logo {
+    padding-top: 10%;
     text-align: center;
-    font-size: 48px;
-    font-weight: bolder;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color: #000;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline black;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    /* border: 2px solid #000; */
-    margin: 1%;
-    margin-bottom: 5%;
-    flex: none;
-    width: 25%;
-    background-color: #fff;
-    border-radius: 10px;
-    transition: all .3s linear;
-}
-
-.card:hover {
-    box-shadow: 5px 5px 20px rgb(61, 61, 61);
-}
-
-.head {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(121, 76, 50);
-    margin: 0;
-    text-align: center;
-    color: #FFF;
-    padding: 5px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 75px;
-    align-items: center;
+    background-color: rgb(250, 246, 191);
 }
 
 p {
-    margin: 20px;
-    font-size: 18px;
-    height: 200px;
+    font-size: x-large;
 }
 
-.score {
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(63, 63, 63);
-    font-size: 24px;
-    color: #FFF;
-    font-weight: bold;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+button {
+    font-size: xx-large;
+    border-radius: 10px;
 }
 
-@media screen and (max-width: 1080px) {
-    .card {
-        width: 35%;
-    }
+button a {
+    color: black;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 720px) {
-    .card {
-        width: 75%;
-    }
+button:hover {
+    box-shadow: 5px 5px 10px rgb(71, 71, 71);
+    background-color: rgb(202, 202, 202);
 }

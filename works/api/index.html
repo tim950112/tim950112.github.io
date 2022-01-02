@@ -5,50 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>說明文件</title>
     <link rel="stylesheet" href="index.css">
-    <title>api串接練習1</title>
 </head>
 
 <body>
-    <a href="https://ghibliapi.herokuapp.com/">
-        <div class="logo">Ghibli Studio</div>
-    </a>
-    <div id="root"></div>
-
-
-    <script>
-        const app = document.getElementById('root');
-        const container = document.createElement('div');
-        container.setAttribute('class', 'container');
-        app.appendChild(container);
-
-
-        var request = new XMLHttpRequest();
-        request.open('GET', 'https://ghibliapi.herokuapp.com/films');
-
-        request.onload = function() {
-            var data = JSON.parse(this.response);
-
-            if (this.readyState === 4 && this.status === 200) {
-                data.forEach(movie => {
-                    const card = document.createElement('div');
-                    card.setAttribute('class', 'card');
-                    container.appendChild(card);
-                    let newCardInfo = `
-                    <div class="head"><h1 class="name">${movie.title}</h1></div>
-		            	<p class="description">${movie.description.substring(0, 200)}...</p>
-                        <div class="score">score : ${movie.rt_score}</div>
-		            `;
-                    card.innerHTML = newCardInfo;
-                })
-            } else {
-                console.log('error');
-            }
-        };
-
-        request.send();
-    </script>
+    <p>不好意思</p>
+    <p>因為有串接到不同來源的網站API(政府資料開放平台)</p>
+    <p>所以為了跨過瀏覽器的限制以正常瀏覽網站</p>
+    <p>需使用第三方工具CORS Anywhere</p>
+    <p>請先前往此網站
+        <a target="_blank" href="https://cors-anywhere.herokuapp.com/">
+            https://cors-anywhere.herokuapp.com/
+        </a>
+    </p>
+    <p>並點擊按鈕"Request temporary access to the demo server"</p>
+    <p>就能暫時啟用該功能!</p>
+    <button><a href="../api3/index.html">點此繼續前往我的作品</a></button>
 </body>
-
 
 </html>
