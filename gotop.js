@@ -7,7 +7,7 @@
         locatioin = 4 / 5, // 按鈕出現在螢幕的高度比例
         right = 30, // 距離右邊 px 值
         opacity = 0.6, // 透明度
-        speed = 500, // 捲動速度
+        speed = 100, // 捲動延遲速度
         $button = $("#goTopButton"),
         $body = $(document),
         $win = $(window);
